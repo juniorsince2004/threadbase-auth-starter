@@ -10,9 +10,9 @@ with no token. Your job is to lock them with a `verifyToken` middleware.
 server/
 ├── server.js              # app entry — mounts /auth and /api/threads
 ├── routes/
-│   ├── threads.js         # GET (public) + POST/PUT/DELETE (UNPROTECTED — fix these)
+│   ├── threads.js         # GET (public) + protected POST/PUT/DELETE
 │   └── auth.js            # provided login scaffold — DO NOT EDIT
-├── middleware/            # empty — your verifyToken.js goes here
+├── middleware/            # JWT verification middleware
 ├── prisma/
 │   ├── schema.prisma      # Author / Thread / Comment (SQLite)
 │   ├── client.js          # PrismaClient singleton
